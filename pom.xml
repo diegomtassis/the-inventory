@@ -12,6 +12,7 @@
 
 	<modules>
 		<module>parent</module>
+		<module>shared/commons</module>
 		<module>bounded-contexts/item/parent</module>
 		<module>bounded-contexts/item/domain/api</module>
 		<module>bounded-contexts/item/domain/impl</module>

@@ -5,20 +5,22 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>org.diegomtassis.inventory.item</groupId>
+		<groupId>org.diegomtassis.inventory</groupId>
 		<artifactId>parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../../parent</relativePath>
 	</parent>
 
-	<artifactId>inventory-item-domain-api</artifactId>
-	<name>Inventory :: Item :: Domain API</name>
+	<artifactId>inventory-commons</artifactId>
+	<name>Inventory :: Commons</name>
 	<packaging>jar</packaging>
 
 	<dependencies>
+
+		<!-- third party -->
 		<dependency>
-			<groupId>org.diegomtassis.inventory</groupId>
-			<artifactId>inventory-commons</artifactId>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
 		</dependency>
 	</dependencies>
 </project>

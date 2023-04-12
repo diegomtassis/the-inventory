@@ -12,21 +12,25 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.release>11</maven.compiler.release>
-		<java.version>11</java.version>
-		<maven.compiler.source>${java.version}</maven.compiler.source>
-		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<maven.compiler.release>17</maven.compiler.release>
+		<java.version>17</java.version>
+		<maven.compiler.release>17</maven.compiler.release>
 
 		<!-- dependencies versions -->
-		<junit.version>4.13</junit.version>
-		<easymock.version>4.2</easymock.version>
-		<mockito.version>3.3.3</mockito.version>
-		<slf4j.version>1.7.30</slf4j.version>
-		<logback.version>1.2.3</logback.version>
+		<junit.version>5.9.2</junit.version>
+		<mockito.version>5.3.0</mockito.version>
+		<slf4j.version>2.0.7</slf4j.version>
+		<logback.version>1.4.6</logback.version>
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
+			<!-- Inventory -->
+			<dependency>
+				<groupId>org.diegomtassis.inventory</groupId>
+				<artifactId>inventory-commons</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 
 			<!-- 3rd-party -->
 			<dependency>
@@ -42,7 +46,7 @@
 			<dependency>
 				<groupId>commons-io</groupId>
 				<artifactId>commons-io</artifactId>
-				<version>2.3</version>
+				<version>2.11.0</version>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
@@ -58,25 +62,26 @@
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-collections4</artifactId>
-				<version>4.2</version>
+				<version>4.4</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
-				<version>3.8.1</version>
+				<version>3.12.0</version>
+			</dependency>
+
+			<!-- Spring -->
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-commons</artifactId>
+				<version>3.0.4</version>
 			</dependency>
 
 			<!-- 3rd-party test -->
 			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
+					<groupId>org.junit.jupiter</groupId>
+					<artifactId>junit-jupiter-api</artifactId>
 				<version>${junit.version}</version>
-				<scope>test</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.easymock</groupId>
-				<artifactId>easymock</artifactId>
-				<version>${easymock.version}</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
@@ -93,13 +98,18 @@
 			<plugins>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.11.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-jar-plugin</artifactId>
-					<version>3.1.0</version>
+					<version>3.3.0</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-failsafe-plugin</artifactId>
-					<version>2.22.1</version>
+					<version>3.0.0</version>
 					<executions>
 						<execution>
 							<goals>
@@ -116,7 +126,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>3.0.0</version>
+				<version>3.3.0</version>
 				<executions>
 					<execution>
 						<id>timestamp-property</id>
