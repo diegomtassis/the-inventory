@@ -12,7 +12,6 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.release>17</maven.compiler.release>
 		<java.version>17</java.version>
 		<maven.compiler.release>17</maven.compiler.release>
 
@@ -30,6 +29,12 @@
 				<groupId>org.diegomtassis.inventory</groupId>
 				<artifactId>inventory-commons</artifactId>
 				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.diegomtassis.inventory.item</groupId>
+				<artifactId>inventory-item-test-utils</artifactId>
+				<version>${project.version}</version>
+				<scope>test</scope>
 			</dependency>
 
 			<!-- 3rd-party -->

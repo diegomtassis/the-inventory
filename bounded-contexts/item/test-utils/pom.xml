@@ -8,39 +8,29 @@
 		<groupId>org.diegomtassis.inventory.item</groupId>
 		<artifactId>parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../../parent</relativePath>
+		<relativePath>../parent/pom.xml</relativePath>
 	</parent>
 
-	<artifactId>inventory-item-domain-impl</artifactId>
-	<name>Inventory :: Item :: Domain Impl</name>
+	<artifactId>inventory-item-test-utils</artifactId>
+	<name>Inventory :: Item :: Test Utils</name>
 	<packaging>jar</packaging>
 
 	<dependencies>
 
-		<!-- inventory -->
-		<dependency>
-			<groupId>org.diegomtassis.inventory</groupId>
-			<artifactId>inventory-commons</artifactId>
-		</dependency>
+		<!-- Inventory -->
 		<dependency>
 			<groupId>org.diegomtassis.inventory.item</groupId>
 			<artifactId>inventory-item-domain-api</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.diegomtassis.inventory.item</groupId>
-			<artifactId>inventory-item-test-utils</artifactId>
-		</dependency>
 
-		<!-- 3rd party -->
+		<!-- third party -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-collections4</artifactId>
+			<artifactId>commons-lang3</artifactId>
 		</dependency>
-
-		<!-- test -->
 		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-api</artifactId>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
 		</dependency>
 	</dependencies>
 </project>
