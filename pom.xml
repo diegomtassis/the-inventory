@@ -17,6 +17,7 @@
 		<module>bounded-contexts/item/test-utils</module>
 		<module>bounded-contexts/item/domain/api</module>
 		<module>bounded-contexts/item/domain/impl</module>
+		<module>bounded-contexts/item/infrastructure/persistence/api</module>
 		<module>bounded-contexts/item/infrastructure/persistence/jpa</module>
 	</modules>
 

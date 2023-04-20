@@ -10,26 +10,16 @@
 		<relativePath>../../../parent</relativePath>
 	</parent>
 
-	<artifactId>inventory-item-persistence-jpa</artifactId>
-	<name>Inventory :: Item :: Persistence JPA</name>
+	<artifactId>inventory-item-persistence-api</artifactId>
+	<name>Inventory :: Item :: Persistence API</name>
 	<packaging>jar</packaging>
 
 	<dependencies>
-
-		<!-- Inventory -->
-		<dependency>
-			<groupId>org.diegomtassis.inventory.item</groupId>
-			<artifactId>inventory-item-persistence-api</artifactId>
-		</dependency>
 
 		<!-- 3rd-party -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-collections4</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
 		</dependency>
 	</dependencies>
 
